@@ -1,4 +1,9 @@
+var clickedTime; var createdTime; var reactionTime;
+
 function dissapear() {
+  clickedTime=Date.now();
+  reactionTime=(clickedTime-createdTime)/1000;
+  alert(reactionTime);
 	document.getElementById("box").style.display="none";
 }
 
@@ -8,5 +13,6 @@ function comeBack() {
 
   setTimeout(function() {
     document.getElementById("box").style.display="block";
+    createdTime=Date.now();
   }, time);
 }
