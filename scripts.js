@@ -3,7 +3,10 @@ function dissapear() {
 }
 
 function comeBack() {
+  var time=Math.random();
+  time=time*5000;
+
   setTimeout(function() {
     document.getElementById("box").style.display="block";
-  }, 5000);
+  }, time);
 }
